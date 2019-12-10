@@ -15,14 +15,14 @@ Repositório dedicado ao curso de R básico ministrado durante o dia 11/12/2019 
 11/12/2019
 
 Manhã – 8:00 às 11:30
-1. Introdução ao Software R
-2. Planejamento experimental: Sorteios e preparo de planilhas de Delineamentos Básicos, Esquema fatorial e Parcelas subdivididas
-3. Análise de variância (ANOVA): Análise de pressupostos e transformações usuais
+- Introdução ao Software R
+- Planejamento experimental: Sorteios e preparo de planilhas de Delineamentos Básicos, Esquema fatorial e Parcelas subdivididas
+- Análise de variância (ANOVA): Análise de pressupostos e transformações usuais
 
 Tarde – 13:30 às 17:00
-4. Análise de variância (ANOVA): Análise e interpretação: Delineamentos básicos, Esquema Fatorial, Parcelas subdividida
-5. Teste de comparações e agrupamento de médias
-6. Regressão
+- Análise de variância (ANOVA): Análise e interpretação: Delineamentos básicos, Esquema Fatorial, Parcelas subdividida
+- Teste de comparações e agrupamento de médias
+- Regressão
 
 ---
 
