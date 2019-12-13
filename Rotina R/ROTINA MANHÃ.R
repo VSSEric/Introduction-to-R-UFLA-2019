@@ -1,5 +1,5 @@
 ########################################################################
-###########           CURSO:INTRODU«√O AO SOFTWARE R         ###########
+###########           CURSO:INTRODU√á√ÉO AO SOFTWARE R         ###########
 ###########             Eric Vinicius Vieira Silva           ###########
 ###########              ericvinicius.vs@gmail.com           ###########
 ###########                     11/12/2019                   ###########
@@ -16,12 +16,12 @@
 
 citation() #Como citar o software R
 
-#No R, decimal È representado por ponto " . " Se desejamos escrever
-#quatro virgula cinco, a representaÁ„o correta È 4.5
-#virgula ser· utilizada para separar valores, linhas, colunas, e funÁıes
+#No R, decimal √© representado por ponto " . " Se desejamos escrever
+#quatro virgula cinco, a representa√ß√£o correta √© 4.5
+#virgula ser√° utilizada para separar valores, linhas, colunas, e fun√ß√µes
 
 
-#2) OPERA«’ES MATEMATICAS
+#2) OPERA√á√ïES MATEMATICAS
 
 2+2
 3-1
@@ -45,31 +45,31 @@ tan(45) #Tangente
 ##-------------------------- CRIANDO OBJETOS -------------------------##
 
 
-a<-7  # O comando <- indica que o objeto "a" receber· o valor 7; 
+a<-7  # O comando <- indica que o objeto "a" receber√° o valor 7; 
       #Esse objeto fica armazenado no ambiente de trabalho 
 
-a     #Chamando o objeto "a" o R apresentar· o valor atribuido ao objeto
+a     #Chamando o objeto "a" o R apresentar√° o valor atribuido ao objeto
 
 b<-5
 
-a+b   #Quando o comando "recebe" (<-) n„o È utilizado, o mesmo 
-      #n„o ser· armazenado
+a+b   #Quando o comando "recebe" (<-) n√£o √© utilizado, o mesmo 
+      #n√£o ser√° armazenado
 
-c<-a+b  #Caso queira armazenar o resultado, È necessario criar um objeto 
+c<-a+b  #Caso queira armazenar o resultado, √© necessario criar um objeto 
 
 c
 
-#AtenÁ„o com sobrepossiÁ„o. Sempre que um objetivo j· existente
-#recebe um novo valor, o anterior ser· substituido
+#Aten√ß√£o com sobrepossi√ß√£o. Sempre que um objetivo j√° existente
+#recebe um novo valor, o anterior ser√° substituido
 
-a #O objeto "a" È igual a 7
+a #O objeto "a" √© igual a 7
 
-a<-19 #Caso o mesmo objeto receba um novo valor, o mesmo substituir· o antigo
+a<-19 #Caso o mesmo objeto receba um novo valor, o mesmo substituir√° o antigo
 
 a
 
 a<-7
-a2<-19 #Caso n„o deseje apagar o objeto anterior. Deve ser criado um novo objeto, no caso "a2"
+a2<-19 #Caso n√£o deseje apagar o objeto anterior. Deve ser criado um novo objeto, no caso "a2"
 a
 a2
 
@@ -78,11 +78,11 @@ a2
 ls() #Objetos armazenados 
 
 
-rm(a2) #RemoÁ„o de objeto. Observe que somente a2 ser· removido do workspace
+rm(a2) #Remo√ß√£o de objeto. Observe que somente a2 ser√° removido do workspace
 
 
 
-rm(list=ls()) #Deleta tudo que est· armazenado no workspace
+rm(list=ls()) #Deleta tudo que est√° armazenado no workspace
 
 
 
@@ -98,10 +98,10 @@ a+b
 a*b
 a/b
 
-sum(a) #SomatÛrio de "a"
+sum(a) #Somat√≥rio de "a"
 sum(a+b)
 
-length(a+b) # n˙mero de elementos em a+b
+length(a+b) # n√∫mero de elementos em a+b
 media<-sum(a+b)/length(a+b); 
 media 
 mean(a+b) 
@@ -113,14 +113,14 @@ mean(b)
 
 novob<-b[(order(b, na.last = TRUE, decreasing = TRUE))]; novob
 
-b2<-b[1:3];b2  #retirar os n˙meros do vetor b nas posiÁıes 1, 2 e 3
-b3<-b[-5]; b3  #retirar o quinta observaÁ„o
-b[6]<-100; b #Inserir o valor 100 na posiÁ„o 6
+b2<-b[1:3];b2  #retirar os n√∫meros do vetor b nas posi√ß√µes 1, 2 e 3
+b3<-b[-5]; b3  #retirar o quinta observa√ß√£o
+b[6]<-100; b #Inserir o valor 100 na posi√ß√£o 6
 
 a
 names(a)<-c("A","B","C","D", "E", "F");a
 mean(a)
-a2<-a[a>mean(a)]; a2 #retirar os maiores que a mÈdia
+a2<-a[a>mean(a)]; a2 #retirar os maiores que a m√©dia
 mean(a2)
 
 ab<-data.frame(a,b); ab #Criando data.frame composto pelos vetores a e b
@@ -129,9 +129,9 @@ names(ab)<-c("Amb1", "Amb2");ab #Renomeando as a e b para ambientes
 
 ab$Amb1 #Observar somente o Ambiente 1
 
-mean(ab$Amb1) #MÈdia do ambiente 1
+mean(ab$Amb1) #M√©dia do ambiente 1
 
-var(ab$Amb1) #Vari‚ncia do ambiente 1
+var(ab$Amb1) #Vari√¢ncia do ambiente 1
 
 length(ab[1,])  #[x,y] Neste caso x representa as linhas, e y as colunas
                 #Estamos interessados em verificar quantos valores temos
@@ -142,12 +142,12 @@ mean(ab$Amb1)
 
 
 ab$Amb3<- c(30, 60, 90, 100, 120, 760); ab #Adicionando o Ambiente 3
-mean(ab$Amb3) #mÈdia ambiente 3
+mean(ab$Amb3) #m√©dia ambiente 3
 
-#… possivel conectar comandos utilizando &
+#√â possivel conectar comandos utilizando &
 ab[ab$Amb1 > mean(ab$Amb1)
    & ab$Amb2 > mean(ab$Amb2)
-   & ab$Amb3 > mean(ab$Amb3), ] #GenÛtipos acima da mÈdia em todos os Ambs
+   & ab$Amb3 > mean(ab$Amb3), ] #Gen√≥tipos acima da m√©dia em todos os Ambs
 
 ab2<-ab[order(ab$Amb2, decreasing = TRUE), ]; ab2 #Ordenando de acordo
                                                   #com o ambiente 2
@@ -162,7 +162,7 @@ setwd("C:\\Users\\Usuario\\Desktop\\CURSO R 2019")
 getwd()
 dir()
 
-ex1<-read.table("exemplo1.txt", h=T) #h=T informa que cabeÁalho
+ex1<-read.table("exemplo1.txt", h=T) #h=T informa que cabe√ßalho
 
 ex1
 
@@ -175,20 +175,20 @@ ex1
 
 ex1$Amb1 #Observar dados somente do ambiente 1
 
-mean(ex1$Amb2) #MÈdia do ambiente 2
+mean(ex1$Amb2) #M√©dia do ambiente 2
 
-var(ex1$Amb3) #Vari‚ncia do ambiente 3
+var(ex1$Amb3) #Vari√¢ncia do ambiente 3
 
 
 ex1[ex1$Amb1 > mean(ex1$Amb1)
     & ex1$Amb2 > mean(ex1$Amb2)
-    & ex1$Amb3 > mean(ex1$Amb3), ]  #GenÛtipos acima da mÈdia em 
+    & ex1$Amb3 > mean(ex1$Amb3), ]  #Gen√≥tipos acima da m√©dia em 
                                     #todos os Ambientes
 
 ex12<-ex1[order(ex1$Amb2, decreasing = TRUE), ]; ex12
 
 
-##------------------- ESTATÕSTICA DESCRITIVA B¡SICA -------------------##
+##------------------- ESTAT√çSTICA DESCRITIVA B√ÅSICA -------------------##
 
 summary(ab)
 var(ab)
@@ -204,7 +204,7 @@ apply(ex1,1, summary)
 apply(ex1,1,sd)
 apply(ex1,1,var) 
 
-##--------------------- INSTALA«√O DE PACOTES ---------------------##
+##--------------------- INSTALA√á√ÉO DE PACOTES ---------------------##
 
 install.packages("agricolae")
 install.packages("ExpDes.pt")
@@ -222,17 +222,17 @@ install.packages("lme4")
 
 ##------------------- PLANEJAMENTO EXPERIMENTAL -------------------##
 
-#1) RepetiÁ„o
-#2) CasualizaÁ„o
+#1) Repeti√ß√£o
+#2) Casualiza√ß√£o
 #3) Controle local
 
 library("agricolae") #Carregar o pacote
 
 ?design.X # Existem diversos delineamentos experimentais que podem/devem 
-            # ser utilizados, delineamentos no inglÍs È conhecido como design
+            # ser utilizados, delineamentos no ingl√™s √© conhecido como design
             # X deve ser substituido por:
             # crd para Inteiramente casualizado
-            # rcdb para Blocos Completos casualizado
+            # rcbd para Blocos Completos casualizado
             # ab para Esquema fatorial
             # alpha para Alpha Latice
             # bib para Blocos Incompletos
@@ -244,10 +244,10 @@ library("agricolae") #Carregar o pacote
             # strip para experimentos em faixas
 
 
-#DIC, X Tratamentos, X RepetiÁıes
+#DIC, X Tratamentos, X Repeti√ß√µes
 
-trt<-(1:X) #N˙mero de tratamentos
-r<-X #N˙mero de repetiÁıes
+trt<-(1:X) #N√∫mero de tratamentos
+r<-X #N√∫mero de repeti√ß√µes
 
 sorteioDIC<-design.crd(trt, r, serie = 3, seed = 0, kinds = "Super-Duper",randomization=TRUE)
 
@@ -256,7 +256,7 @@ write.table(sorteioDIC$book, file='SorteioDIC.csv',
             row.names=FALSE, col.names=c("Parcela", "Rep", "Trat"), sep =" ")
 
 
-#DBCC, X Tratamentos, X RepetiÁıes
+#DBCC, X Tratamentos, X Repeti√ß√µes
 
 trt<-(1:X)
 r<-X
@@ -271,9 +271,9 @@ write.table(sorteioDBCC$book, file='SorteioDBCC.csv',
 
 #FATORIAL A por B, 
 
-trt<-c(A,B) #Mais fatores -> separar por virgulas
+trt<-c(A,B) #Mais fatores -> separar por virgulas. Basta substituir A e B pelo nivel dos fatores, exemplo 5 x 4.
 
-r<-3        #n˙mero de repetiÁıes
+r<-3        #n√∫mero de repeti√ß√µes
 
 
 sorteioFATDIC<-design.ab(trt, r, serie = 3, design=c("crd"),seed = 0, kinds = "Super-Duper",first=TRUE,randomization=TRUE)
@@ -290,7 +290,7 @@ write.table(sorteioFATDBCC$book, file='SorteioFATDBCC.csv',
             row.names=FALSE, col.names=c("Parcela", "Bloco", "Fator A", "Fator B"), sep =" ")
 
 
-#PARCELA SUBDIVIDIDA->PRIM.FAT. 3TRATS, SEG.FAT. 12TRATS->TOTAL 3x12=48 trats , 3 RepetiÁıes
+#PARCELA SUBDIVIDIDA->PRIM.FAT. 3TRATS, SEG.FAT. 12TRATS->TOTAL 3x12=48 trats , 3 Repeti√ß√µes
 
 #Semelhante ao fatorial.
 trt1<-(1:3)
@@ -315,9 +315,9 @@ write.table(sorteioSPLITDBCC$book, file='SorteioSPLITDBCC.csv',
 ##------------------- PRESSUPOSTOS DA ANOVA -------------------##
 
 
-# 1) Normalidade dos erros (Os erros devem seguir distribuiÁ„o Normal)
+# 1) Normalidade dos erros (Os erros devem seguir distribui√ß√£o Normal)
 # 2) Homocedasticidade dos erros (Os erros devem ser homogeneos)
-# 3) IndependÍncia dos erros (Os erros devem ser independentes)
+# 3) Independ√™ncia dos erros (Os erros devem ser independentes)
 # 4) Aditividade do modelo (O modelo deve conter apenas efeitos aditivos)
 
 
@@ -333,7 +333,7 @@ dados<-transform(dados, Trat=factor(Trat))
 str(dados) 
 summary(dados)
 
-# Para realizar as an·lises dos pressupostos È necess·rio extrair 
+# Para realizar as an√°lises dos pressupostos √© necess√°rio extrair 
 # primeiramente os ERROS.
 
 AOVDados<-aov(ABS ~ Trat, data = dados)
@@ -347,21 +347,21 @@ shapiro.test(AOVDados$residuals)
 install.packages("fBasics")
 library(fBasics)
 
-qqnormPlot(AOVDados$residuals) #Plotar o gr·fico com os residuos. 
+qqnormPlot(AOVDados$residuals) #Plotar o gr√°fico com os residuos. 
 
-histPlot(x = as.timeSeries(AOVDados$residuals)) #observar a distribuiÁ„o dos dados
+histPlot(x = as.timeSeries(AOVDados$residuals)) #observar a distribui√ß√£o dos dados
 
 
 # HOMOCEDASTICIDADE
 
 bartlett.test(AOVDados$residuals~Trat,data=dados) 
 
-# INDEPEND NCIA
+# INDEPEND√äNCIA
 
 install.packages("car")    
 library("car")
 
-dwt(lm(AOVDados)) # Neste caso ser· utilizado o teste de Durbin-Watson
+dwt(lm(AOVDados)) # Neste caso ser√° utilizado o teste de Durbin-Watson
 
 
 # ADITIVIDADE
@@ -369,16 +369,16 @@ dwt(lm(AOVDados)) # Neste caso ser· utilizado o teste de Durbin-Watson
 install.packages("asbio")
 library(asbio)
 
-tukey.add.test(dados$ABS,  dados$Rep, dados$Trat) 
+tukey.add.test(dados$ABS, dados$Trat, dados$Rep) 
 
-##------------------- TRANSFORM«√O DE DADOS -------------------##
+##------------------- TRANSFORM√á√ÉO DE DADOS -------------------##
 
-# Caso os pressupostos da ANOVA n„o sejam atingindos, os dados do experimento
-# n„o podem ser submetidos a An·lise de Vari‚ncia.
+# Caso os pressupostos da ANOVA n√£o sejam atingindos, os dados do experimento
+# n√£o podem ser submetidos a An√°lise de Vari√¢ncia.
 
 # Visando atender aos pressupostos algumas estrategias podem ser utilizadas
 
-# Como a transformaÁ„o de dados. 
+# Como a transforma√ß√£o de dados. 
 
 dados<-read.table("exemplo2.txt", h=T)
 str(dados) 
@@ -389,9 +389,9 @@ bartlett.test(residuals(AOVDados)~dados$Trat)
 car::dwt(lm(AOVDados)) 
 asbio::tukey.add.test(dados$VarResp,  dados$Rep, dados$Trat)
 
-##------------------- Testando TransformaÁıes Comuns -------------------##
+##------------------- Testando Transforma√ß√µes Comuns -------------------##
 
-# Raiz Quadrada, Raiz Cubica, Log, PotÍncia
+# Raiz Quadrada, Raiz Cubica, Log, Pot√™ncia
 dados$RQUAD<-dados$VarResp^(1/2) 
 dados$RCUB<-dados$VarResp^(1/3)
 dados$LOG<-log(dados$VarResp)
@@ -424,7 +424,7 @@ lambda <- boxcox(AOVDados)$x[which(boxcox(AOVDados)$y==max(boxcox(AOVDados)$y))]
 # ou lambda <- bc$x[which(bc$y==max(bc$y))]
 lambda
 
-# usando a tranformaÁ„o indicada -> 0.1818182 ~ 0.18
+# usando a tranforma√ß√£o indicada -> 0.1818182 ~ 0.18
 dados$BC0.18<-dados$VarResp^0.18
 
 AOVBC0.18<- aov(BC0.18~Trat+Rep, data=dados)
