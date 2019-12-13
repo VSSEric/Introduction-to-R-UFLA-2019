@@ -1,11 +1,11 @@
 ########################################################################
-###########           CURSO:INTRODU«√O AO SOFTWARE R         ###########
+###########           CURSO:INTRODU√á√ÉO AO SOFTWARE R         ###########
 ###########             Eric Vinicius Vieira Silva           ###########
 ###########              ericvinicius.vs@gmail.com           ###########
 ###########                     11/12/2019                   ###########
 ########################################################################
 
-##------------------------ AN¡LISE DE VARI¬NCIA ---------------------------##
+##------------------------ AN√ÅLISE DE VARI√ÇNCIA ---------------------------##
 
 setwd("C:\\Users\\Usuario\\Desktop\\CURSO R 2019")
 dir()
@@ -14,7 +14,7 @@ str(dadosDIC)
 dadosDIC<-transform(dadosDIC, Trat=factor(Trat))
 str(dadosDIC)
 
-# Saber o modelo dos delineamentos È importante, pois indicaremos para o R como È o
+# Saber o modelo dos delineamentos √© importante, pois indicaremos para o R como √© o
 # modelo a ser utilizado.
 
 #aov(formula, data = NULL)
@@ -24,7 +24,7 @@ str(dadosDIC)
 
 AOVDIC<-aov(Prod ~ Trat, data = dadosDIC) 
 
-anova(AOVDIC)    # Quadro de An·lise de Vari‚ncia
+anova(AOVDIC)    # Quadro de An√°lise de Vari√¢ncia
 
 library(agricolae)
 cv.model(AOVDIC) # CV%
@@ -37,10 +37,10 @@ str(dadosDBC) #Check!
 
 AOVDBC<-aov(Prod ~ Gen + Bloco, data = dadosDBC) 
 
-anova(AOVDBC)    #Quadro de An·lise de Vari‚ncia
+anova(AOVDBC)    #Quadro de An√°lise de Vari√¢ncia
 cv.model(AOVDBC) #CV%
 
-##------------------------ TESTE DE M…DIAS ---------------------------##
+##------------------------ TESTE DE M√âDIAS ---------------------------##
 
 #DIC
 #Tukey
@@ -78,7 +78,7 @@ TukeyDBC
            
 #ScottKnott
 library(ScottKnott)
-skDBC <- SK(x=dadosDBC, y=dadosDBC$Prod, model="y~Gen", which="Gen", sig.level=0.05, id.trim=10)
+skDBC <- SK(x=dadosDBC, y=dadosDBC$Prod, model="y~Gen+Bloco", which="Gen", sig.level=0.05, id.trim=10)
 summary(skDBC)   
 
 
@@ -131,12 +131,12 @@ analiseDBC<-dbc(trat=dadosDBC2$Epoca, bloco=dadosDBC2$Bloco, resp=dadosDBC2$Brix
 sink()
 
 # Linear
-graficos(analiseDBC, grau = 1, mod = TRUE, main = "Gr·fico Regress„o ", sub = " ",
+graficos(analiseDBC, grau = 1, mod = TRUE, main = "Gr√°fico Regress√£o ", sub = " ",
          xlab = "Epoca", ylab = "Brix", pch = 19,
          xlim = NULL, ylim = NULL, bty = "o")
 
 # Quadratica
-graficos(analiseDBC, grau = 2, mod = TRUE, main = "Gr·fico Regress„o ", sub = " ",
+graficos(analiseDBC, grau = 2, mod = TRUE, main = "Gr√°fico Regress√£o ", sub = " ",
          xlab = "Epoca", ylab = "Brix", pch = 19,
          xlim = NULL, ylim = NULL, bty = "o")
 
@@ -154,13 +154,13 @@ str(FATDUPLO)
 attach(FATDUPLO)
 sink("Saida ANOVA FATORIAL DBC.txt", type = c ("output"))
 analiseFAT<-fat2.dbc(fator1=GEN, fator2=DOSE, bloco=BLOCO, resp=RESP, quali = c(TRUE, FALSE), mcomp = "tukey", 
-         fac.names = c("GEN”TIPOS", "DOSES"), sigT = 0.05, sigF = 0.05)
+         fac.names = c("GEN√ìTIPOS", "DOSES"), sigT = 0.05, sigF = 0.05)
 sink()
 detach(FATDUPLO)
 
 DBC<-dbc(trat=FATDUPLO$DOSE, bloco=FATDUPLO$BLOCO, resp=FATDUPLO$RESP, quali = FALSE)
 
-graficos(DBC, grau = 1, mod = TRUE, main = "Gr·fico Regress„o ", sub = " ",
+graficos(DBC, grau = 1, mod = TRUE, main = "Gr√°fico Regress√£o ", sub = " ",
          xlab = "DOSE", ylab = "RESP", pch = 19,
          xlim = NULL, ylim = NULL, bty = "o")
 
@@ -181,7 +181,7 @@ summary(modelo)
 attach(SUB)
 sink("Saida ANOVA PARCELA SUB.txt", type = c ("output"))
 SUBDIC<-psub2.dic(Genotipo, Aplic, Bloco, Altura, quali = c(TRUE, TRUE), 
-             mcomp = "tukey", fac.names = c("Genotipos", "AplicaÁ„o"), sigT = 0.05, 
+             mcomp = "tukey", fac.names = c("Genotipos", "Aplica√ß√£o"), sigT = 0.05, 
              sigF = 0.05)
 sink()
 detach(SUB)
@@ -192,11 +192,11 @@ detach(SUB)
 
 
 
-##--------------------------- Conte˙do extra -----------------------------##
+##--------------------------- Conte√∫do extra -----------------------------##
 
 
 
-##-------------------------- AN¡LISE CONJUNTA ---------------------------##
+##-------------------------- AN√ÅLISE CONJUNTA ---------------------------##
 
 exp<-read.table("conjunta.txt", h = TRUE) #Leitura da tabela completa com todos os ambientes
 exp<-transform(exp, GEN=factor(GEN), REP=factor(REP), AMB=factor(AMB))
@@ -254,30 +254,30 @@ summary(aov6)
 aovgeral <- lapply(split(exp, f=exp$AMB), aov, formula=PROD~GEN+REP)
 lapply(aovgeral, summary)
 (glrs <- sapply(aovgeral, df.residual)) # graus de liberdade
-(qmrs <- sapply(aovgeral, deviance)/glrs) # quadrados mÈdios
+(qmrs <- sapply(aovgeral, deviance)/glrs) # quadrados m√©dios
 
 (H <- max(qmrs)/min(qmrs))
 #Se H < 7 ok!
 pf(H,35,35)
 
-#An·lise conjunta
-conjunta<-aov(PROD ~ REP%in%AMB + AMB + GEN + GEN:AMB, data=exp)#Se tiver NA usa funÁ„o lm
+#An√°lise conjunta
+conjunta<-aov(PROD ~ REP%in%AMB + AMB + GEN + GEN:AMB, data=exp)#Se tiver NA usa fun√ß√£o lm
 #Conjunta lm conjunta<-lm(terms(resp~amb+amb:bloco+trat+amb:trat, keep.order=TRUE), data=exp)
 anova(conjunta)
 #ou conjunta1<-aov(PROD~ AMB/REP+GEN+AMB:GEN, data=exp)
 summary(conjunta)
 cv.model(conjunta)
 
-#cASO SE DESEJE TESTAR OS TRATs e os AMBs COM A INTERA«√O, BASTA ADCIONAR Error(exp:trat)
+#cASO SE DESEJE TESTAR OS TRATs e os AMBs COM A INTERA√á√ÉO, BASTA ADCIONAR Error(exp:trat)
 conjunta2<-aov(PROD ~ AMB/REP+GEN+Error(GEN:AMB), data=exp)
 summary(conjunta2)        
 
 library("lsmeans")
 lsmeans(conjunta)
-(majus<-lsmeans(conjunta, "GEN")) #Caso a interaÁ„o n„o fosse significativa
+(majus<-lsmeans(conjunta, "GEN")) #Caso a intera√ß√£o n√£o fosse significativa
 
 
-# Se a interaÁ„o for significativa, deve-se realizar o teste de mÈdia dentro de cada ambiente
+# Se a intera√ß√£o for significativa, deve-se realizar o teste de m√©dia dentro de cada ambiente
 # para isso, utiliza-se os AMBs separados
 
 library("ExpDes.pt")
