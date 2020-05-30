@@ -8,7 +8,7 @@ Repositório dedicado ao curso de R básico ministrado durante o dia 11/12/2019 
                                     Minicurso: Análise de dados: Software R
                                            Eric Vinicius Vieira Silva
                              Doutorando em Genética e Melhoramento de Plantas - UFLA
-                               ericvinicius.vs@gmail.com | linkedin.com/in/vseric 
+                             | ericvinicius.vs@gmail.com | linkedin.com/in/vseric | 
 
 ---
                                                    CRONOGRAMA
